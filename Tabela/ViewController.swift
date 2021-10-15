@@ -49,8 +49,18 @@ class ViewController: UIViewController {
         self.tableViewTable.delegate = self
         
         self.view.addSubview(self.tableViewTable) // adicionando a tabela na view
-        self.createConstraintsTable(with: self.tableViewTable)
-        
+
+        self.createConstraintsTable(with: self.tableViewTable,
+                                    topAnchor: self.view.topAnchor,
+                                    topConstant: 5,
+                                    bottomAnchor: self.view.bottomAnchor,
+                                    bottomConstant: -5,
+                                    trailingAnchor: self.view.trailingAnchor,
+                                    trailingConstant: -5,
+                                    leadingAnchor: self.view.leadingAnchor,
+                                    leadingConstant: 5,
+                                    widthAnchor: nil,
+                                    heightAnchor: nil)
     }
     
     private func insertTitlesIntoArray() {
@@ -66,7 +76,18 @@ class ViewController: UIViewController {
         self.titles.append("Amanda")
     }
     
-    private func createConstraintsTable(with tableView: UITableView) {
+    private func createConstraintsTable(with tableView: UITableView,
+                                        topAnchor: NSLayoutYAxisAnchor,
+                                        topConstant: CGFloat,
+                                        bottomAnchor: NSLayoutYAxisAnchor,
+                                        bottomConstant: CGFloat,
+                                        trailingAnchor: NSLayoutXAxisAnchor,
+                                        trailingConstant: CGFloat,
+                                        leadingAnchor: NSLayoutXAxisAnchor,
+                                        leadingConstant: CGFloat,
+                                        widthAnchor: CGFloat? = nil,
+                                        heightAnchor: CGFloat? = nil
+    ) {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         // NS vem de Next Step -> Next empresa do Steve Jobs
@@ -81,11 +102,11 @@ class ViewController: UIViewController {
 //            tableView.widthAnchor       -> largura
 //            tableView.heightAnchor      -> altura
             
-            tableView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 5),
-            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -5),
-            tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -5),
-            tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 5)
-            //self.tableViewTable.widthAnchor.constraint(equalToConstant: 100)
+            tableView.topAnchor.constraint(equalTo: topAnchor, constant: topConstant),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: bottomConstant),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: trailingConstant),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: leadingConstant)
+            // self.tableViewTable.widthAnchor.constraint(equalToConstant: widthAnchor)
         ])
         
         tableView.layer.cornerRadius = 20.0
