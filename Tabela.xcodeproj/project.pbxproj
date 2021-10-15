@@ -12,6 +12,7 @@
 		88A2BBC32719A5A900E059C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A2BBC22719A5A900E059C5 /* Assets.xcassets */; };
 		88A2BBCE271A01EB00E059C5 /* ViewControllerWithTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A2BBCD271A01EB00E059C5 /* ViewControllerWithTableViewDataSource.swift */; };
 		88A2BBD0271A027000E059C5 /* ViewControllerWithTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A2BBCF271A027000E059C5 /* ViewControllerWithTableViewDelegate.swift */; };
+		88A2BBD2271A097C00E059C5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A2BBD1271A097C00E059C5 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		88A2BBC72719A5A900E059C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88A2BBCD271A01EB00E059C5 /* ViewControllerWithTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWithTableViewDataSource.swift; sourceTree = "<group>"; };
 		88A2BBCF271A027000E059C5 /* ViewControllerWithTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWithTableViewDelegate.swift; sourceTree = "<group>"; };
+		88A2BBD1271A097C00E059C5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				88A2BBCD271A01EB00E059C5 /* ViewControllerWithTableViewDataSource.swift */,
 				88A2BBC22719A5A900E059C5 /* Assets.xcassets */,
 				88A2BBC72719A5A900E059C5 /* Info.plist */,
+				88A2BBD1271A097C00E059C5 /* UIView.swift */,
 			);
 			path = Tabela;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A2BBD2271A097C00E059C5 /* UIView.swift in Sources */,
 				88A2BBBE2719A5A700E059C5 /* ViewController.swift in Sources */,
 				88A2BBD0271A027000E059C5 /* ViewControllerWithTableViewDelegate.swift in Sources */,
 				88A2BBCE271A01EB00E059C5 /* ViewControllerWithTableViewDataSource.swift in Sources */,

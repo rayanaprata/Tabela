@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         
         self.view.addSubview(self.tableViewTable) // adicionando a tabela na view
 
-        self.createConstraintsTable(with: self.tableViewTable,
+        self.tableViewTable.createConstraintsTable(with: self.tableViewTable,
                                     topAnchor: self.view.topAnchor,
                                     topConstant: 5,
                                     bottomAnchor: self.view.bottomAnchor,
@@ -58,9 +58,15 @@ class ViewController: UIViewController {
                                     trailingAnchor: self.view.trailingAnchor,
                                     trailingConstant: -5,
                                     leadingAnchor: self.view.leadingAnchor,
-                                    leadingConstant: 5,
-                                    widthAnchor: nil,
-                                    heightAnchor: nil)
+                                    leadingConstant: 5)
+        
+        self.tableViewTable.layer.cornerRadius = 20.0
+        self.tableViewTable.layer.borderWidth = 2.0
+        self.tableViewTable.layer.borderColor = UIColor.systemPink.cgColor
+        
+        self.view.layer.cornerRadius = 20
+        
+        // se quiser fazer um círculo o elemento precisa ser um quadrado e o corner radius precisa ser metade da altura
     }
     
     private func insertTitlesIntoArray() {
@@ -74,48 +80,6 @@ class ViewController: UIViewController {
         
         self.titles.append("Elisa")
         self.titles.append("Amanda")
-    }
-    
-    private func createConstraintsTable(with tableView: UITableView,
-                                        topAnchor: NSLayoutYAxisAnchor,
-                                        topConstant: CGFloat,
-                                        bottomAnchor: NSLayoutYAxisAnchor,
-                                        bottomConstant: CGFloat,
-                                        trailingAnchor: NSLayoutXAxisAnchor,
-                                        trailingConstant: CGFloat,
-                                        leadingAnchor: NSLayoutXAxisAnchor,
-                                        leadingConstant: CGFloat,
-                                        widthAnchor: CGFloat? = nil,
-                                        heightAnchor: CGFloat? = nil
-    ) {
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        
-        // NS vem de Next Step -> Next empresa do Steve Jobs
-        NSLayoutConstraint.activate([
-            
-//            principais constraints:
-            
-//            tableView.topAnchor         -> em cima
-//            tableView.bottomAnchor      -> em baixo
-//            tableView.trailingAnchor    -> direita
-//            tableView.leadingAnchor     -> esquerda
-//            tableView.widthAnchor       -> largura
-//            tableView.heightAnchor      -> altura
-            
-            tableView.topAnchor.constraint(equalTo: topAnchor, constant: topConstant),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: bottomConstant),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: trailingConstant),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: leadingConstant)
-            // self.tableViewTable.widthAnchor.constraint(equalToConstant: widthAnchor)
-        ])
-        
-        tableView.layer.cornerRadius = 20.0
-        tableView.layer.borderWidth = 2.0
-        tableView.layer.borderColor = UIColor.systemPink.cgColor
-        
-        self.view.layer.cornerRadius = 20
-        
-        // se quiser fazer um círculo o elemento precisa ser um quadrado e o corner radius precisa ser metade da altura
     }
     
 }
