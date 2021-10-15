@@ -12,7 +12,7 @@ extension ViewController: UITableViewDataSource {
     
     // MARK: UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // normalmente aqui neste método é passado a quandiade de linhas do JSON que retornou da API
+        // normalmente aqui neste método é passado a quantiade de linhas do JSON que retornou da API
         let numberOfRows: Int = self.titles.count
         return numberOfRows
     }

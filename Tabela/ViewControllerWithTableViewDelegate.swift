@@ -26,7 +26,7 @@ extension ViewController: UITableViewDelegate {
         
         self.titles.remove(at: indexPath.row)
         
-        tableViewTable.reloadData()   // ele executa novamente o number of rows in sections e popula a table view novamente
+        tableViewTable.reloadData()   // ele executa novamente o numberOfRows in sections e popula a table view novamente
     }
     
 }
