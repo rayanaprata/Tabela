@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         self.tableViewTable.delegate = self
         
         self.view.addSubview(self.tableViewTable) // adicionando a tabela na view
-        self.createConstraintsTable()
+        self.createConstraintsTable(with: self.tableViewTable)
         
     }
     
@@ -66,31 +66,31 @@ class ViewController: UIViewController {
         self.titles.append("Amanda")
     }
     
-    private func createConstraintsTable() {
-        self.tableViewTable.translatesAutoresizingMaskIntoConstraints = false
+    private func createConstraintsTable(with tableView: UITableView) {
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         
         // NS vem de Next Step -> Next empresa do Steve Jobs
         NSLayoutConstraint.activate([
             
 //            principais constraints:
             
-//            self.tableViewTable.topAnchor         -> em cima
-//            self.tableViewTable.bottomAnchor      -> em baixo
-//            self.tableViewTable.trailingAnchor    -> direita
-//            self.tableViewTable.leadingAnchor     -> esquerda
-//            self.tableViewTable.widthAnchor       -> largura
-//            self.tableViewTable.heightAnchor      -> altura
+//            tableView.topAnchor         -> em cima
+//            tableView.bottomAnchor      -> em baixo
+//            tableView.trailingAnchor    -> direita
+//            tableView.leadingAnchor     -> esquerda
+//            tableView.widthAnchor       -> largura
+//            tableView.heightAnchor      -> altura
             
-            self.tableViewTable.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 5),
-            self.tableViewTable.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -5),
-            self.tableViewTable.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -5),
-            self.tableViewTable.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 5)
+            tableView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 5),
+            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -5),
+            tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -5),
+            tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 5)
             //self.tableViewTable.widthAnchor.constraint(equalToConstant: 100)
         ])
         
-        self.tableViewTable.layer.cornerRadius = 20.0
-        self.tableViewTable.layer.borderWidth = 2.0
-        self.tableViewTable.layer.borderColor = UIColor.systemPink.cgColor
+        tableView.layer.cornerRadius = 20.0
+        tableView.layer.borderWidth = 2.0
+        tableView.layer.borderColor = UIColor.systemPink.cgColor
         
         self.view.layer.cornerRadius = 20
         
